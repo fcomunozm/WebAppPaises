@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+p{
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(90deg, #e9811f77, #000000c9,#000000c9), url('/galaxy.png');
+  background-size: 100%, 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}

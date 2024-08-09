@@ -1,0 +1,20 @@
+#opciones{
+  background: linear-gradient(90deg, transparent, hsla(0, 0%, 0%, 0.7), transparent);
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#titulo{
+  align-items: center;
+  background: linear-gradient(90deg, transparent, hsla(0, 0%, 0%, 0.7), transparent);
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-left: 4px;
+  padding: 5px;
+}
+
+button{
+  color: white;
+}

@@ -1,0 +1,30 @@
+<div class="mt-4 contenedor">
+  <div id="titulo">
+    <h2>Continentes</h2>
+  </div>
+  <hr>
+
+  <div class="row">
+    <div class="col container text-center" id="opciones">
+      <!-- SearchBox -->
+      <button *ngFor="let region of regions"
+        class="btn mx-2"
+        [ngClass]="{ 'btn-outline-light': region === selectedRegion }"
+        (click)="searchByRegion(region)"
+        >
+        {{ getButtonText(region)  }} </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <hr>
+      <shared-loading-spinner *ngIf="isLoading"></shared-loading-spinner>
+      <countries-table [countries]="countries"></countries-table>
+    </div>
+  </div>
+
+
+</div>
+
+

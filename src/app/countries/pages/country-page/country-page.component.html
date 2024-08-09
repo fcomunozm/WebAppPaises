@@ -1,0 +1,52 @@
+
+
+<ng-template #loading>
+  <div class="alert alert-info">
+    Espere por favor
+  </div>
+</ng-template>
+
+<div *ngIf="country; else loading" class="mt-4">
+  <div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div>
+        <h2 class="card-title"><strong>{{ country.name.common }}</strong> ({{ country.translations ['spa'].common}}) </h2>
+        <hr>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-4">
+        <img [src]="country.flags.svg" alt="Bandera" class="country.name.common" class="img-thumbnail">
+      </div>
+      <div class="col">
+        <h4 class="card-text">Información</h4>
+        <ul class="list-group card-text">
+          <li class="list-group-item">
+            <strong>Capital:</strong> {{ country.capital }}
+          </li>
+          <li class="list-group-item">
+            <strong>Población:</strong> {{ country.population | number }}
+          </li>
+
+          <li class="list-group-item">
+            <strong>Continente:</strong> {{ country.region }}
+          </li>
+
+          <li class="list-group-item">
+            <strong>Subregion:</strong> {{ country.subregion }}
+          </li>
+
+          <li class="list-group-item">
+            <strong>Ubicación: </strong> <a class="card-link" href="{{ country.maps.googleMaps }}"> Maps </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</div>
